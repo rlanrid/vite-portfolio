@@ -1,0 +1,51 @@
+:root {
+    --mainfont-gmarket: "GmarketSans";
+    --mainfont-abel: "Abel";
+    --mainfont-ibm: "IBM Plex Mono";
+    /* monospace; */
+    --mainfont-chosun: "ChosunNm";
+    /* chosun명조 */
+
+    --primary-color: #070707;
+    --main-font: #E6E6E6;
+    --main-line: #E6E6E6;
+    --dark-grey: #272727;
+    --line-grey: #4c4c4c;
+    --mid-grey: #707070;
+    --light-grey: lightgrey;
+
+    --black: #000;
+    --white: #fff;
+    --red: #f00;
+
+    --port1: #F2FF26;
+    --port2: #CFF07C;
+    --port3: #CAD5D1;
+    --port4: #D94041;
+
+    --black100: #383838;
+    --black200: #59595A;
+    --black300: #727272;
+    --black400: #8A8A8A;
+    --black500: #9d9d9d;
+    --black600: #D9D9D9;
+    --black900: #F5F5F5;
+
+    --white100: #fff;
+    --white200: #f4f4f4;
+    --white300: #e1e0e0;
+    --white400: #bebebe;
+    --white500: #aaaaaa;
+
+    --blue100: #0071E3;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+    }
+}
