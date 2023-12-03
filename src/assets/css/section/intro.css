@@ -1,5 +1,4 @@
 .intro__wrap {
-    height: auto;
     padding-top: 195px;
     padding-bottom: 195px;
     color: var(--main-font);
@@ -21,7 +20,83 @@
     margin-bottom: 100px;
 }
 
-.intro__stack {}
+.intro__stack {
+    overflow: hidden;
+    width: 75%;
+    margin: auto;
+}
+
+.slider__wrap {
+    overflow: hidden;
+    display: flex;
+}
+
+.slider__track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 45s linear infinite;
+}
+
+.slider {
+    display: inline-block;
+    padding: 0 25px;
+    white-space: nowrap;
+}
+
+.text {
+    font-size: 26px;
+}
+
+.text.tHtml {
+    font-family: var(--font-html);
+}
+
+.text.tCss {
+    font-family: var(--font-css);
+}
+
+.text.tJs {
+    font-family: var(--font-js);
+}
+
+.text.tNode {
+    font-family: var(--font-node);
+}
+
+.text.tMongo {
+    font-family: var(--font-mongo);
+}
+
+.text.tReact {
+    font-family: var(--font-react);
+}
+
+.text.tPhp {
+    font-family: var(--font-php);
+}
+
+.text.tJquery {
+    font-family: var(--font-jqeury);
+}
+
+.text.tSass {
+    font-family: var(--font-sass);
+}
+
+.text.tJson {
+    font-family: var(--mainfont-ibm);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100%));
+    }
+}
+
 
 @media(max-width:1380px) {
     .intro__text {

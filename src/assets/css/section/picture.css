@@ -20,6 +20,7 @@
     width: 100%;
     max-width: 100%;
     height: auto;
+    filter: saturate(0);
 }
 
 .pic__bg__line {
