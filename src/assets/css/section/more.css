@@ -4,7 +4,7 @@
 
 .more__item {
     padding: 27px 0;
-    color: var(--main-font);
+    color: var(--gainsboro);
     display: flex;
     align-items: center;
     justify-content: left;

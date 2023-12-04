@@ -18,7 +18,7 @@
 .about__intro {
     font-size: 32px;
     font-family: var(--mainfont-gmarket);
-    color: var(--main-font);
+    color: var(--gainsboro);
     margin-bottom: 38px;
 }
 
@@ -31,14 +31,14 @@
     padding: 25px;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--main-font);
+    border: 1px solid var(--gainsboro);
     transition: background 0.3s;
 }
 
 .about__link a>p {
     font-family: var(--mainfont-ibm);
     font-size: 14px;
-    color: var(--main-font);
+    color: var(--gainsboro);
     font-weight: 600;
     transition: color 0.3s;
 }
@@ -49,7 +49,7 @@
 }
 
 .about__link a:hover {
-    background-color: var(--main-font);
+    background-color: var(--gainsboro);
 }
 
 .about__link a:hover p {

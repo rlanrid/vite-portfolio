@@ -8,12 +8,21 @@
 
 .port__title {
     margin-bottom: 40px;
+    position: sticky;
+    z-index: 17;
+    left: 0;
+    top: 100px;
 }
 
 .port__item {
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 40px;
+    position: sticky;
+    left: 0;
+    top: 220px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
 }
 
 .port__cont .info {
@@ -53,7 +62,7 @@
 
 .port__cont .info2 img {
     max-width: 100%;
-    transition: transform 0.3s ease-in-out;
+    transition: scale3d 0.3s ease-in-out;
 }
 
 .port__cont figure > img {
@@ -72,18 +81,21 @@
     align-items: center;
 }
 
-.port__item.num1 {
+.port__item.p1 {
     background-color: var(--port1);
 }
-.port__item.num2 {
+.port__item.p2 {
     background-color: var(--port2);
+    top: 240px;
 }
-.port__item.num3 {
+.port__item.p3 {
     background-color: var(--port3);
+    top: 260px;
 }
-.port__item.num4 {
+.port__item.p4 {
     margin-bottom: 240px;
     background-color: var(--port4);
+    top: 280px;
 }
 
 @media(max-width:890px){

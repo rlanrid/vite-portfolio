@@ -13,7 +13,7 @@
 }
 
 .footer__logo a {
-    color: var(--main-font);
+    color: var(--gainsboro);
     font-family: var(--mainfont-abel);
     font-size: 18px;
 }
@@ -24,7 +24,7 @@
 }
 
 .footer__nav>ul>li>a {
-    color: var(--main-font);
+    color: var(--gainsboro);
     font-family: var(--mainfont-abel);
     font-size: 18px;
     opacity: 0.5;
@@ -36,7 +36,7 @@
 }
 
 .footer__made {
-    color: var(--main-font);
+    color: var(--gainsboro);
     font-family: var(--mainfont-abel);
 }
 

@@ -61,6 +61,21 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+}
+
+.light {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    /* background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 90%); */
+    background-color: var(--gainsboro);
+    filter: blur(100px);
+    opacity: 0.15;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .contact__cont .hello {
@@ -71,7 +86,7 @@
 
 .contact__cont .email {
     font-size: 72px;
-    color: var(--main-font);
+    color: var(--gainsboro);
 }
 
 @media(max-width:1080px) {
