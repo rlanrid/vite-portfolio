@@ -2,6 +2,13 @@
     padding-bottom: 225px;
 }
 
+.more__title {
+    position: sticky;
+    z-index: 17;
+    left: 0;
+    top: 100px;
+}
+
 .more__item {
     padding: 27px 0;
     color: var(--gainsboro);

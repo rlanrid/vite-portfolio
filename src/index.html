@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <div class="parallax__progress">
+        <progress max="100" value="0"></progress>
+    </div>
+    <!-- //parallax__progress -->
+
     <header id="header">
         <div class="header__wrap">
             <div class="header__container">
@@ -514,18 +519,22 @@
     </div>
     <!-- //background-line -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        gsap.to("progress", {
+            value: 100,
+            ease: "none",
+            scrollTrigger: { scrub: 0.3 }
+        })
+
+    </script>
+
     <!-- script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.122.0/examples/js/controls/OrbitControls.js"></script>
-    <script src="assets/js/picture.js" type="module"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
+    <!-- <script id="vertexShader" type="x-shader/x-vertex">
 
-    <script src="assets/js/mouse.js"></script>
-    <script src="assets/js/nav.js"></script>
-
-
-    <script id="vertexShader" type="x-shader/x-vertex">
         uniform float iter;
         uniform vec2 currentMouse;
         varying vec2 vUv;
@@ -581,7 +590,7 @@
 
             gl_FragColor = vec4(texture, vPosition.z * 0.031 + 1.2);
         }
-    </script>
+    </script> -->
 
 
 </body>

@@ -21,7 +21,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(25px);
     z-index: -1;
 }
@@ -112,14 +112,6 @@
 
 .nav li a:hover {
     opacity: 1;
-}
-
-.header__line {
-    width: 100%;
-    height: 1px;
-    background-color: var(--gainsboro);
-    position: relative;
-    z-index: 100;
 }
 
 /* 햄버거 메뉴 */

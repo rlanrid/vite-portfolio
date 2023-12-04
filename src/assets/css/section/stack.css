@@ -2,6 +2,13 @@
     padding-bottom: 195px;
 }
 
+.stack__title {
+    position: sticky;
+    left: 0;
+    top: 100px;
+    z-index: 17;
+}
+
 .stack__cont {
     display: flex;
     flex-wrap: wrap;

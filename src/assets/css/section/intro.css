@@ -28,14 +28,16 @@
 
 .slider__wrap {
     overflow: hidden;
+    width: 100%;
     display: flex;
+    position: relative;
 }
 
 .linear__effect {
     position: absolute;
     width: 100%;
     height: 40px;
-    /* background-image: linear-gradient(to right, var(--black) 1%, rgba(7, 7, 7, 0) 20%, rgba(7, 7, 7, 0) 80%, var(--black) 99%); */
+    background-image: linear-gradient(to right, var(--black) 1%, rgba(7, 7, 7, 0) 20%, rgba(7, 7, 7, 0) 80%, var(--black) 99%);
     z-index: 1;
 }
 

@@ -53,6 +53,13 @@
     padding-right: 0;
 }
 
+.contact__title {
+    position: sticky;
+    left: 0;
+    top: 100px;
+    z-index: 100px;
+}
+
 .contact__cont {
     width: 100%;
     height: 576px;

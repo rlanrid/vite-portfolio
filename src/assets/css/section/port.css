@@ -43,7 +43,7 @@
     padding: 12px 0;
     font-family: var(--mainfont-gmarket);
     color: var(--primary-color);
-    transition: padding 0.3s ease-in-out
+    transition: padding 0.3s ease-in-out;
 }
 
 .port__cont .info2:hover {
@@ -62,10 +62,10 @@
 
 .port__cont .info2 img {
     max-width: 100%;
-    transition: scale3d 0.3s ease-in-out;
+    transition: transform 0.3s;
 }
 
-.port__cont figure > img {
+.port__cont figure>img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
@@ -84,30 +84,34 @@
 .port__item.p1 {
     background-color: var(--port1);
 }
+
 .port__item.p2 {
     background-color: var(--port2);
     top: 240px;
 }
+
 .port__item.p3 {
     background-color: var(--port3);
     top: 260px;
 }
+
 .port__item.p4 {
     margin-bottom: 240px;
     background-color: var(--port4);
     top: 280px;
 }
 
-@media(max-width:890px){
+@media(max-width:890px) {
     .port__cont .info2 .title {
         font-size: 24px;
     }
 }
 
-@media(max-width:580px){
+@media(max-width:580px) {
     .port__cont .info2 {
         flex-wrap: wrap;
     }
+
     .port__cont .info2 .title {
         width: 100%;
     }
