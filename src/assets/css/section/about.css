@@ -43,10 +43,9 @@
 }
 
 .about__link a>p {
-    font-family: var(--mainfont-ibm);
+    font-family: var(--mainfont-tg);
     font-size: 14px;
     color: var(--gainsboro);
-    font-weight: 600;
     transition: color 0.3s;
 }
 
@@ -67,8 +66,15 @@
     filter: grayscale(100%) sepia(100%) hue-rotate(0deg) saturate(10000%) brightness(0%);
 }
 
+.about__right {}
+
 .about__right figure {
     height: 100%;
+    background-image: url(../../img/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: 50%;
 }
 
 .about__right img {
@@ -76,6 +82,7 @@
     height: 100%;
     object-fit: cover;
     display: inline-block;
+    opacity: 0.03;
 }
 
 @media(max-width:980px) {

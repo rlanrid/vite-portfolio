@@ -1,4 +1,5 @@
 export function mouse() {
+    // picture 섹션 이미지
     document.querySelector(".pic__container img").addEventListener("mousemove", e => {
         if (window.innerWidth >= 680) {
             // 마우스 좌표 값
@@ -20,6 +21,33 @@ export function mouse() {
         }
     });
 
+    // more 섹션 이미지
+    const moreItems = document.querySelectorAll(".more__item");
+    const moreImgs = document.querySelectorAll(".more__img");
+
+    moreItems.forEach((moreItem, index) => {
+        const moreImg = moreImgs[index];
+
+        moreItem.addEventListener("mousemove", (e) => {
+            const moreItemRect = moreItem.getBoundingClientRect(); // moreItem의 위치 정보 가져오기
+
+            const mouseX = e.clientX - moreItemRect.left; // moreItem 내부에서의 X 좌표
+            const mouseY = e.clientY - moreItemRect.top; // moreItem 내부에서의 Y 좌표
+
+            moreImg.style.left = mouseX - 125 + "px";
+            moreImg.style.top = mouseY - 50 + "px";
+        });
+
+        moreItem.addEventListener("mouseleave", () => {
+            moreImg.style.opacity = 0;
+        });
+
+        moreItem.addEventListener("mouseenter", () => {
+            moreImg.style.opacity = 1;
+        });
+    });
+
+    // contact 섹션 이미지
     const light = document.querySelector(".contact__cont .light");
     const container = document.querySelector(".contact__cont");
 

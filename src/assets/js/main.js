@@ -1,11 +1,13 @@
 import { mouse } from "./mouse.js"
-import { nav } from "./nav.js"
+import { menu } from "./menu.js"
 import { picture } from "./picture.js"
 import { smooth } from "./smooth.js"
+import { menubar } from "./menubar.js"
 
 window.addEventListener("load", function () {
     mouse();
-    nav();
+    menu();
     picture();
     smooth();
+    menubar();
 })

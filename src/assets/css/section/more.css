@@ -10,6 +10,7 @@
 }
 
 .more__item {
+    position: relative;
     padding: 27px 0;
     color: var(--gainsboro);
     display: flex;
@@ -63,6 +64,41 @@
 
 .more__item .link a img {
     width: 14px;
+}
+
+.more__item .more__img {
+    width: 250px;
+    height: 325px;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    z-index: 17;
+    opacity: 0;
+    transition: opacity 0.25s;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.more__item:hover .more__img {
+    opacity: 1;
+}
+
+.more__item.num1 .more__img {
+    background-color: skyblue;
+    background-image: url(../../img/about.jpg);
+}
+
+.more__item.num2 .more__img {
+    background-color: rgb(160, 223, 160);
+    background-image: url(../../img/hero.png);
+}
+
+.more__item.num3 .more__img {
+    background-color: bisque;
+    background-image: url(../../img/TDimg1.jpg);
 }
 
 @media(max-width:780px) {

@@ -95,7 +95,7 @@
 }
 
 .text.tJson {
-    font-family: var(--mainfont-ibm);
+    font-family: var(--mainfont-tg);
 }
 
 @keyframes scroll {

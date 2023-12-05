@@ -20,7 +20,7 @@ body {
     background-color: var(--gainsboro);
 }
 
-/* 텍스트 공통요소 */
+/* 텍스트 공통요소~ */
 
 .text__box {
     color: var(--gainsboro);
@@ -122,9 +122,9 @@ body {
     }
 }
 
-@media(max-width:480px) {
+@media(max-width:490px) {
     .secT h2 {
-        font-size: 6vw;
+        font-size: 28px;
         margin-left: 24px;
     }
 

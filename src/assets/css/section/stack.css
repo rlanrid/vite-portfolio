@@ -24,8 +24,8 @@
     width: 25%;
 }
 
-.stack__item.num8 .stack__icon img {
-    width: 22.5px;
+.stack__item.num8 .stack__icon .mongoImg {
+    width: 25px;
 }
 
 .stack__icon {
@@ -36,15 +36,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-.stack__icon img {
-    filter: saturate(0);
-    transition: filter 0.5s;
+.stack__icon .noise {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.stack__icon>img {
+    filter: grayscale();
+    transition: filter 0.8s cubic-bezier(0.4, 0, 1, 1);
+    position: relative;
+    z-index: 2;
 }
 
 .stack__icon img:hover {
-    filter: saturate(100%);
+    filter: none;
 }
 
 .stack__desc {
@@ -61,7 +72,7 @@
 
 .stack__desc .desc {
     font-size: 14px;
-    font-family: var(--mainfont-ibm);
+    font-family: var(--mainfont-tg);
     color: var(--mid-grey);
 }
 
@@ -70,5 +81,10 @@
         width: 60px;
         height: 60px;
         padding: 5px;
+    }
+
+    .stack__icon .noise {
+        width: 60px;
+        height: 60px;
     }
 }

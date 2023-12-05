@@ -30,9 +30,6 @@
 /* Abel 폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
-/* IBM Plex */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&display=swap');
-
 /* 조선일보명조 */
 @font-face {
     font-family: 'ChosunNm';
@@ -81,4 +78,12 @@
         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
     font-display: swap;
+}
+
+/* TG */
+@font-face {
+    font-family: 'TG Frekuent Mono Variable';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/src/fonts/TGfont.woff');
 }
