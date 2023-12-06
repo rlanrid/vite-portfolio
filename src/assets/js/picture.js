@@ -176,11 +176,11 @@ export function picture() {
             this.controls.enableDamping = false;
 
             // 조명 설정
-            let ambientLight = new THREE.AmbientLight(0x0000ff, 0.15);
+            let ambientLight = new THREE.AmbientLight(0xffffff, 0.15);
             this.scene.add(ambientLight);
 
             // 조명 설정
-            let directionalLight = new THREE.DirectionalLight(0x4400ff, 0.4);
+            let directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
             directionalLight.position.set(5, 3, 2);
             directionalLight.target.position.set(0, 0, 0);
             this.scene.add(directionalLight);
@@ -222,8 +222,8 @@ export function picture() {
             // 구 만들기
             let blobGeom = new THREE.TorusGeometry(20, 5, 10, 50);
             let blobMat = new THREE.MeshPhongMaterial({
-                color: 0xff00ff,
-                specular: 0x0000ff,
+                color: 0xffffff,
+                specular: 0xffffff,
                 shininess: 40
             });
             this.blobMesh = new THREE.Mesh(blobGeom, blobMat);

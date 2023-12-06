@@ -8,7 +8,7 @@ import { title } from "./appear.js"
 window.addEventListener("load", function () {
     mouse();
     menu();
-    picture();
+    // picture();
     smooth();
     menubar();
     title();
