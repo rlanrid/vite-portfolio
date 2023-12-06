@@ -1,6 +1,6 @@
 body {
     background-color: var(--primary-color);
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 /* 메뉴 진행바 */
@@ -13,11 +13,16 @@ body {
     height: 1px;
     border: none;
     background: transparent;
+    padding: 0 176px;
 }
 
 .parallax__progress progress::-webkit-progress-value {
     background-attachment: fixed;
     background-color: var(--gainsboro);
+}
+
+.parallax__progress progress::-webkit-progress-bar {
+    background: transparent;
 }
 
 /* 텍스트 공통요소~ */
@@ -60,7 +65,7 @@ body {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 

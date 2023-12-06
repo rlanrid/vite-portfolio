@@ -5,15 +5,116 @@
     position: relative;
     z-index: 6;
     text-align: center;
+    overflow: hidden;
 }
+
+.picture__line__ver {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.picture__line__ver .container {
+    height: 90vh
+}
+
+.picture__line__horiz .container {
+    height: 90vh
+}
+
+.picture__ver__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picture__line__horiz {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.picture__horiz__wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.horizon__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--dark-grey);
+    padding-right: 0;
+}
+
+.noise__overlay {
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    position: absolute;
+    z-index: 5;
+    opacity: 0.07;
+    background-image: url(../../img/noise.gif);
+    background-size: auto;
+    background-position: 0 0;
+}
+
+.pic__track {
+    overflow: hidden;
+    width: 100%;
+}
+
+.pic__title {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -45%);
+    font-size: 19vw;
+    color: var(--gainsboro);
+    font-family: var(--font-node);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5vw;
+    text-align: left;
+    white-space: nowrap;
+    /* animation: track 20s linear infinite; */
+}
+
+/* @keyframes track {
+    0% {
+        transform: translate(-50%, -45%);
+    }
+
+    100% {
+        transform: translate(-150%, -45%);
+    }
+} */
 
 .pic__container {
     width: 100%;
-    max-width: 980px;
+    max-width: 1250px;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 6;
 }
 
 .pic__container>img {
@@ -35,7 +136,7 @@
 
 @media(max-width:1280px) {
     .pic__container {
-        max-width: 70%;
+        max-width: 1150px;
     }
 }
 
@@ -46,7 +147,7 @@
     }
 
     .pic__container {
-        max-width: 95%;
+        max-width: 1000px;
     }
 
     .scroll__box {
