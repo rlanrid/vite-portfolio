@@ -34,7 +34,7 @@ export function mouse() {
             const mouseX = e.clientX - moreItemRect.left; // moreItem 내부에서의 X 좌표
             const mouseY = e.clientY - moreItemRect.top; // moreItem 내부에서의 Y 좌표
 
-            moreImg.style.left = mouseX - 125 + "px";
+            moreImg.style.left = mouseX - 173 + "px";
             moreImg.style.top = mouseY - 50 + "px";
         });
 

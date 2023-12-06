@@ -6,7 +6,7 @@ body {
 /* 메뉴 진행바 */
 .parallax__progress progress {
     position: fixed;
-    top: 100px;
+    top: 80px;
     left: 0;
     z-index: 1000;
     width: 100%;
@@ -42,13 +42,13 @@ body {
 
 .container {
     height: 100vh;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
 .containerH {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
 .ver__wrap {
@@ -77,9 +77,8 @@ body {
     position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(25px);
-    padding: 12px 0;
+    padding-top: 12px;
     border-top: 1px solid var(--dark-grey);
-    border-bottom: 1px solid var(--gainsboro);
 }
 
 .secT>img {
@@ -87,7 +86,7 @@ body {
     height: 30px;
     position: absolute;
     left: 0;
-    top: 27%;
+    top: 32%;
 }
 
 .secT h2 {
@@ -95,6 +94,17 @@ body {
     color: var(--gainsboro);
     font-size: 36px;
     margin-left: 30px;
+    line-height: 1.7;
+}
+
+
+.title__line {
+    position: absolute;
+    left: 0;
+    top: 72px;
+    width: 0;
+    height: 1px;
+    background-color: var(--gainsboro);
 }
 
 .gsap-marker {
