@@ -98,7 +98,7 @@ export function picture() {
             // 설정
             this.settings = {
                 cameraDistance: 100,
-                bgColor: 0x111,
+                bgColor: 0x070707,
                 mouseEase: 0.05,
                 blobMinScale: 1,
                 blobMaxScale: 2,
