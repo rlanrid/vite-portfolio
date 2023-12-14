@@ -95,6 +95,7 @@ canvas {
     background-position: 0 0;
 }
 
+/* pic__contents */
 .pic__contents {
     width: 100%;
     height: 100%;
@@ -112,6 +113,7 @@ canvas {
     font-weight: 600;
     line-height: 0.9;
     letter-spacing: 0.05vw;
+    margin-top: 2vw;
 }
 
 .pic__text .text1 {
@@ -124,13 +126,42 @@ canvas {
 .pic__text .text2 {
     margin-left: 20vw;
     margin-bottom: 2vw;
+    position: relative;
 }
 
-.pic__text .text3 {}
+.pic__text .text3 {
+    position: relative;
+}
 
-.text__gif {
+.text__gif1 {
     position: absolute;
     left: 52%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../../img/noise.gif);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50px;
+    width: 240px;
+    height: 120px;
+}
+
+.text__gif2 {
+    position: absolute;
+    left: -7%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../../img/noise.gif);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50px;
+    width: 240px;
+    height: 120px;
+}
+
+.text__gif3 {
+    position: absolute;
+    left: 80%;
     top: 50%;
     transform: translateY(-50%);
     background-image: url(../../img/noise.gif);
@@ -152,9 +183,6 @@ canvas {
     margin-bottom: 0.7vw;
 }
 
-/* .mini__text div {
-    width: 20%;
-} */
 
 
 @media(max-width:780px) {
