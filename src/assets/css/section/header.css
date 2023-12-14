@@ -24,6 +24,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(25px);
     z-index: -1;
+    opacity: 0;
 }
 
 .header__container {
@@ -69,7 +70,9 @@
     /* margin-left: 17px; */
     position: relative;
     cursor: pointer;
-    font-family: var(--mainfont-abel);
+    font-family: var(--font-antonio);
+    font-weight: 100;
+    letter-spacing: 1.25px;
 }
 
 .logo__text em {
