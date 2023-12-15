@@ -1,31 +1,16 @@
 /* picture */
 #picture {
     width: 100%;
-    height: 90vh;
+    height: calc(100vh - 80px);
     position: relative;
     z-index: 6;
     text-align: center;
     overflow: hidden;
 }
 
-canvas {
-    position: absolute;
-    left: -1%;
-    top: 0;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 90vh;
-    overflow-x: hidden;
-    opacity: 0.5;
-    z-index: 4;
-}
-
 #picture>img {
     opacity: 0.9;
 }
-
-
 
 .picture__line__ver {
     position: absolute;
@@ -37,11 +22,11 @@ canvas {
 }
 
 .picture__line__ver .container {
-    height: 90vh
+    height: calc(100vh - 80px)
 }
 
 .picture__line__horiz .container {
-    height: 90vh
+    height: calc(100vh - 80px)
 }
 
 .picture__ver__wrap {
@@ -89,7 +74,7 @@ canvas {
     bottom: 0%;
     position: absolute;
     z-index: 5;
-    opacity: 0.02;
+    opacity: 0.03;
     background-image: url(../../img/noise.gif);
     background-size: auto;
     background-position: 0 0;
@@ -109,67 +94,52 @@ canvas {
 .pic__text {
     font-family: var(--font-antonio);
     color: var(--white);
-    font-size: 11.5vw;
+    font-size: 11vw;
     font-weight: 600;
-    line-height: 0.9;
     letter-spacing: 0.05vw;
-    margin-top: 2vw;
+    line-height: 1.2;
+    text-align: center;
+    display: inline-block;
 }
 
-.pic__text .text1 {
-    text-align: left;
-    margin-left: 7.5vw;
-    margin-bottom: 2vw;
-    position: relative;
+.pic__text .pText {
+    display: flex;
+    align-items: center;
 }
 
-.pic__text .text2 {
-    margin-left: 20vw;
-    margin-bottom: 2vw;
-    position: relative;
+.pic__text .pText.t2,
+.pic__text .pText.t3 {
+    justify-content: center;
 }
 
-.pic__text .text3 {
-    position: relative;
-}
+.pic__text .pText .t {}
 
-.text__gif1 {
-    position: absolute;
-    left: 52%;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url(../../img/noise.gif);
-    background-size: cover;
-    background-position: center center;
-    border-radius: 50px;
+.text__gif {
     width: 240px;
     height: 120px;
-}
-
-.text__gif2 {
-    position: absolute;
-    left: -7%;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url(../../img/noise.gif);
+    background-color: #ccc;
+    border-radius: 100px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     background-position: center center;
-    border-radius: 50px;
-    width: 240px;
-    height: 120px;
 }
 
-.text__gif3 {
-    position: absolute;
-    left: 80%;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url(../../img/noise.gif);
-    background-size: cover;
-    background-position: center center;
-    border-radius: 50px;
-    width: 240px;
-    height: 120px;
+.text__gif.g1 {
+    margin-left: 15px;
+    background-image: url(../../img/1-min.gif);
+}
+
+.text__gif.g2 {
+    margin-right: 15px;
+    background-image: url(../../img/1234-min.gif);
+}
+
+.text__gif.g3 {
+    margin-left: 15px;
+    background-image: url(../../img/3.gif);
 }
 
 .mini__text {
@@ -184,11 +154,8 @@ canvas {
 }
 
 
-
+/* 
 @media(max-width:780px) {
-    #picture {
-        height: 80vh;
-    }
 
 
     .scroll__box {
@@ -204,10 +171,10 @@ canvas {
     .scroll__box>p {
         font-size: 8px;
     }
-}
+} */
 
 
-@media(max-width:480px) {
+/* @media(max-width:480px) {
     #picture {
         height: 60vh;
     }
@@ -215,4 +182,4 @@ canvas {
     .scroll__box {
         width: 120px;
     }
-}
+} */
