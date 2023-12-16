@@ -159,13 +159,18 @@ canvas {
 
 @media(max-width:490px) {
     .secT h2 {
-        font-size: 28px;
+        font-size: 25px;
         margin-left: 24px;
+        white-space: nowrap;
     }
 
     .secT>img {
         width: 20px;
         height: 26px;
-        top: 24%;
+        top: 30%;
+    }
+
+    .title__line {
+        top: 60px;
     }
 }
