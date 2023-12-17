@@ -20,8 +20,10 @@ export function weird() {
 }
 
 export function split() {
+    // split요소 보이게 변경
+    gsap.set(".split", { opacity: 1, visibility: "visible" });
 
-    // 02 모든 텍스트 분리하기
+    // 모든 텍스트 분리하기
     document.querySelectorAll(".split").forEach(text => {
         let splitWrap = text.innerText.split("").join("</span><span aria-hidden='true'>");
         text.innerHTML = "<span aria-hidden='true'>" + splitWrap + "</span>";
@@ -46,6 +48,8 @@ export function split() {
             }
         });
     })
+
+    gsap.set("#picture .text__gif", { opacity: 1, visibility: "visible" });
 
     const ani1 = gsap.timeline();
     ani1.from("#picture .text__gif.g1", { xPercent: 20, autoAlpha: 0, duration: 0.5, delay: 1 })

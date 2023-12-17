@@ -130,6 +130,12 @@ canvas {
 }
 
 
+.split {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
 /* 반응형 */
 @media(max-width:1280px) {
 

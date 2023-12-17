@@ -107,6 +107,10 @@
     align-items: center;
 }
 
+.pic__text .pText.t1 {
+    margin-left: -9px;
+}
+
 .pic__text .pText.t2,
 .pic__text .pText.t3 {
     justify-content: center;
@@ -130,16 +134,22 @@
 .text__gif.g1 {
     margin-left: 15px;
     background-image: url(../../img/1-min.gif);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .text__gif.g2 {
     margin-right: 15px;
     background-image: url(../../img/1234-min.gif);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .text__gif.g3 {
     margin-left: 15px;
     background-image: url(../../img/3.gif);
+    opacity: 0;
+    visibility: hidden;
 }
 
 .mini__text {
