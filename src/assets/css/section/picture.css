@@ -109,6 +109,7 @@
 
 .pic__text .pText.t1 {
     margin-left: -9px;
+    position: relative;
 }
 
 .pic__text .pText.t2,
@@ -116,7 +117,17 @@
     justify-content: center;
 }
 
-.pic__text .pText .t {}
+.t__etc {
+    color: var(--white);
+    font-family: var(--font-antonio);
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-style: italic;
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+}
 
 .text__gif {
     width: 240px;

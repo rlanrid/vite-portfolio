@@ -33,7 +33,8 @@ const animate3 = (item) => {
         { autoAlpha: 1, x: 0, y: 0, delay: delay, duration: 1.5, overwrite: "auto", ease: "expo" })
 }
 
-export function title() {
+export function appear() {
+    // title
     const secTitle = document.querySelectorAll(".secT");
 
     secTitle.forEach(item => {
@@ -77,9 +78,8 @@ export function title() {
             onEnter: () => { animate2(item) }
         })
     })
-}
 
-export function intro() {
+    // intro
     const introSection = document.querySelector("#intro");
     const introItems = gsap.utils.toArray(".gsap__intro");
 
@@ -88,7 +88,7 @@ export function intro() {
 
         ScrollTrigger.create({
             trigger: introSection,
-            start: "top center",
+            start: "190px bottom",
             end: "bottom top",
             once: true,
             onEnter: () => {
@@ -99,5 +99,27 @@ export function intro() {
             // 약간씩 딜레이를 더 줄 수 있어요.
             // delay: index * 0.3 
         });
+    });
+
+    // stack
+    const stackIcons = document.querySelectorAll(".icon__img");
+
+    function handleHover() {
+        const descParagraph = this.parentElement.nextElementSibling.querySelector('.stack__desc > p');
+        if (window.innerWidth >= 760) {
+            descParagraph.style.opacity = '1';
+        }
+    }
+
+    function handleMouseOut() {
+        const descParagraph = this.parentElement.nextElementSibling.querySelector('.stack__desc > p');
+        if (window.innerWidth >= 760) {
+            descParagraph.style.opacity = '0';
+        }
+    }
+
+    stackIcons.forEach((icon) => {
+        icon.addEventListener("mouseover", handleHover);
+        icon.addEventListener("mouseout", handleMouseOut);
     });
 }

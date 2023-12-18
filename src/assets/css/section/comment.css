@@ -2,6 +2,7 @@
     position: relative;
 }
 
+
 .comment__title {
     position: sticky;
     left: 0;
@@ -13,5 +14,56 @@
     width: 100%;
     height: 576px;
     border-bottom: 1px solid var(--dark-grey);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.comment__form {
+    width: 50%;
+}
+
+.comment__form input {
+    width: 90%;
+    display: block;
+    font-size: 1rem;
+    padding: 5px;
+    font-family: var(--mainfont-abel);
+}
+
+.comment__form textarea {
+    width: 90%;
+    display: block;
+    margin-top: 15px;
+    resize: none;
+    padding: 5px;
+    font-family: var(--mainfont-abel);
+}
+
+.comment__form button {
+    padding: 5px;
+    margin-top: 15px;
+    background-color: transparent;
+    color: var(--gainsboro);
+    border: 1px solid var(--gainsboro);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.comment__form button:hover {
+    background-color: var(--gainsboro);
+    color: var(--primary-color);
+}
+
+.comment__list {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--gainsboro);
+}
+
+.comment__list .list {
+    color: var(--gainsboro);
+    font-size: 1rem;
 }
