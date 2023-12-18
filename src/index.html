@@ -124,18 +124,18 @@
         <section id="intro">
             <h2 class="blind">인트로 섹션</h2>
             <div class="intro__wrap containerH">
-                <div class="intro__text">
+                <div class="intro__text gsap__intro" data-delay="0.2">
                     Creating user-centric<br>
                     development with a focus<br>
                     on usability.
                 </div>
-                <div class="intro__desc">
+                <div class="intro__desc gsap__intro" data-delay="0.8">
                     '배움에는 끝이 없다' 라는 말이 있듯이 공부도 100% 라는 완벽한 수치는 없다고 생각합니다.<br>
                     그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도<br>
                     복습하고 새로운 것들을 공부하여 차근차근 프론트엔드 업무에<br>
                     대한 저만의 전문성과 경쟁력을 갖추겠습니다.
                 </div>
-                <div class="intro__stack">
+                <div class="intro__stack gsap__intro" data-delay="1.4">
                     <div class="slider__wrap">
                         <div class="linear__effect"></div>
                         <div class="slider__track" id="sliderTrack1">
@@ -395,6 +395,9 @@
                             <div class="title">HTML5</div>
                             <div class="desc">Front-End Skill</div>
                         </div>
+                        <div class="stack__my">
+                            <p>웹표준을 준수하여 HTML5를 사용할 수 있습니다.</p>
+                        </div>
                     </div>
 
                     <div class="stack__item num2">
@@ -586,23 +589,10 @@
                     <h2>Comment</h2>
                     <div class="title__line"></div>
                 </div>
-                <!-- <div class="comment__cont">
-                    <form class="comment__form">
-                        <fieldset>
-                            <legend class="blind">글쓰기 영역</legend>
-                            <div class="comment__write">
-                                <label for="youName" class="blind">글 작성자</label>
-                                <input type="text" id="youName" placeholder="Write your name">
-                                <label for="youName" class="blind">글 내용</label>
-                                <textarea type="text" id="youName" placeholder="Please write a comment."></textarea>
-                            </div>
-                            <button type="submit" class="btn__style">작성</button>
-                        </fieldset>
-                    </form>
-                    <div class="comment__list">
-
-                    </div>
-                </div> -->
+                <div class="comment__cont">
+                    <form class="comment__form"></form>
+                    <div class="comment__list"></div>
+                </div>
             </div>
         </section>
         <!-- //comment -->
@@ -649,8 +639,6 @@
 
     <!-- script -->
     <script src="assets/js/main.js" type="module"></script>
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
     <script>
         const rand = function (min, max) {
             return Math.random() * (max - min) + min;

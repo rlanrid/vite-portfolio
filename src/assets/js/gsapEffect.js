@@ -44,7 +44,6 @@ export function split() {
                 trigger: text,
                 start: "top bottom",
                 end: "+400",
-                markers: true
             }
         });
     })

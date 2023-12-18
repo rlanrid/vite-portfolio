@@ -70,6 +70,7 @@
 
 .about__right figure {
     height: 100%;
+    filter: saturate(0);
     background-image: url(../../img/about.jpg);
     background-repeat: no-repeat;
     background-size: cover;

@@ -18,6 +18,7 @@
 .stack__item {
     width: 37.5%;
     margin-bottom: 60px;
+    position: relative;
 }
 
 .stack__item:nth-child(3n) {
@@ -74,6 +75,18 @@
     font-size: 14px;
     font-family: var(--mainfont-tg);
     color: var(--mid-grey);
+}
+
+.stack__my {
+    position: absolute;
+    left: 90px;
+    top: 0;
+    font-size: 0.8rem;
+    color: var(--gainsboro);
+}
+
+.stack__my p {
+    padding-right: 10px;
 }
 
 @media(max-width:480px) {

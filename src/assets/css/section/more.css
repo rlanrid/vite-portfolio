@@ -75,11 +75,12 @@
     top: -50px;
     z-index: 20;
     opacity: 0;
-    transition: opacity 0.25s;
+    transition: opacity 0.25s, transform 0.5s ease;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     pointer-events: none;
+    transform: translateY(-20px);
 }
 
 .more__item:hover .more__img {
