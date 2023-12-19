@@ -20,6 +20,7 @@
     font-family: var(--mainfont-gmarket);
     color: var(--gainsboro);
     margin-bottom: 38px;
+    word-break: keep-all;
 }
 
 .about__title {

@@ -54,5 +54,6 @@ export function split() {
     ani1.from("#picture .text__gif.g1", { xPercent: 20, autoAlpha: 0, duration: 0.5, delay: 1 })
         .from("#picture .text__gif.g2", { xPercent: -20, autoAlpha: 0, duration: 0.5 })
         .from("#picture .text__gif.g3", { yPercent: 20, autoAlpha: 0, duration: 0.5 })
+        .from("#picture .t__etc", { xPercent: 20, autoAlpha: 0, duration: 0.5 })
 
 }
