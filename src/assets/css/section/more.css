@@ -66,45 +66,30 @@
     width: 14px;
 }
 
-.more__item .more__img {
-    width: 350px;
+.more__img__wrap {
+    position: absolute;
+    width: 280px;
     height: 400px;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 18;
+}
+
+.more__img__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     border-radius: 20px;
+}
+
+.more__img__inner .more__img {
     position: absolute;
     left: 0;
-    top: -50px;
-    z-index: 20;
-    opacity: 0;
-    transition: opacity 0.25s, transform 0.5s ease;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    transform: translateY(-20px);
-}
-
-.more__item:hover .more__img {
-    opacity: 1;
-}
-
-.more__item.num1 .more__img {
-    background-color: skyblue;
-    background-image: url(../../img/quizmoviesite.png);
-}
-
-.more__item.num2 .more__img {
-    background-color: rgb(160, 223, 160);
-    background-image: url(../../img/vitesite.png);
-}
-
-.more__item.num3 .more__img {
-    background-color: bisque;
-    background-image: url(../../img/webstandardsite.png);
-}
-
-.more__item.num4 .more__img {
-    background-color: bisque;
-    background-image: url(../../img/academysite.png);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media(max-width:780px) {

@@ -1,66 +1,72 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
 export function mouse() {
     // more 섹션 이미지
+    gsap.timeline()
+        .set(".more__cont", { autoAlpha: 1 })
+        .set(".more__cont", { pointerEvents: "all" });
+
+    gsap.defaults({
+        duration: 0.75,
+        ease: "expo.out",
+    });
+
     const moreItems = document.querySelectorAll(".more__item");
-    const moreImgs = document.querySelectorAll(".more__img");
 
-    moreItems.forEach((moreItem, index) => {
-        const moreImg = moreImgs[index];
+    moreItems.forEach((item) => {
+        const imageWrapper = item.querySelector(".more__img__wrap");
+        let itemBounds = item.getBoundingClientRect();
 
-        moreItem.addEventListener("mousemove", (e) => {
-            const moreItemRect = moreItem.getBoundingClientRect(); // moreItem의 위치 정보 가져오기
+        const onMouseEnter = () => {
+            gsap.set(imageWrapper, { scale: 0.8, yPercent: 50, rotation: -15 });
+            gsap.to(imageWrapper, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
+        };
+        const onMouseLeave = () => {
+            gsap.to(imageWrapper, { opacity: 0, yPercent: -50, scale: 0.8, rotation: -15 });
+        };
+        const onMouseMove = ({ x, y }) => {
+            const imageWrapperBounds = imageWrapper.getBoundingClientRect();
+            let yOffset = itemBounds.top / imageWrapperBounds.height;
+            yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
 
-            const mouseX = e.clientX - moreItemRect.left; // moreItem 내부에서의 X 좌표
-            const mouseY = e.clientY - moreItemRect.top; // moreItem 내부에서의 Y 좌표
+            const adjustedY = Math.abs(y - itemBounds.top) - imageWrapperBounds.height / 2 - yOffset;
+            const maxY = item.clientHeight - imageWrapperBounds.height;
+            const finalY = Math.min(adjustedY, maxY);
 
-            moreImg.style.left = mouseX - 173 + "px";
-            moreImg.style.top = mouseY - 50 + "px";
-        });
+            gsap.to(imageWrapper, {
+                duration: 1.25,
+                x: Math.abs(x - itemBounds.left) - imageWrapperBounds.width / 1.55,
+                y: finalY < 0 ? 0 : finalY,
+            });
+        };
 
-        moreItem.addEventListener("mouseleave", () => {
-            moreImg.style.opacity = 0;
-        });
+        item.addEventListener("mouseenter", onMouseEnter);
+        item.addEventListener("mouseleave", onMouseLeave);
+        item.addEventListener("mousemove", onMouseMove);
 
-        moreItem.addEventListener("mouseenter", () => {
-            moreImg.style.opacity = 1;
+        window.addEventListener("resize", () => {
+            itemBounds = item.getBoundingClientRect();
         });
     });
 
-    // contact 섹션 이미지
-    const light = document.querySelector(".contact__cont .light");
+    // contact 섹션
+
+    const light = document.querySelector(".light");
     const container = document.querySelector(".contact__cont");
 
     container.addEventListener("mousemove", e => {
-        if (window.innerWidth >= 680) {
-            const containerRect = container.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const containerCenterX = containerRect.left + containerRect.width / 2;
+        const containerCenterY = containerRect.top + containerRect.height / 2;
 
-            // container의 중심 좌표
-            const containerCenterX = containerRect.left + containerRect.width / 2;
-            const containerCenterY = containerRect.top + containerRect.height / 2;
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
 
-            // 마우스 좌표값과 container의 중심 좌표 사이의 차이
-            const offsetX = e.clientX - containerCenterX;
-            const offsetY = e.clientY - containerCenterY;
+        const diffX = mouseX - containerCenterX;
+        const diffY = mouseY - containerCenterY;
 
-            // light의 크기
-            const lightWidth = light.offsetWidth;
-            const lightHeight = light.offsetHeight;
-
-            // light의 새로운 위치 설정
-            light.style.left = `${containerCenterX - lightWidth / 4 + offsetX / 4}px`;
-            light.style.top = `${containerCenterY - lightHeight / 4 + offsetY / 4}px`;
-        }
+        light.style.left = `${containerCenterX - light.offsetWidth / 2 + diffX / 10}px`;
+        light.style.top = `${containerCenterY - light.offsetHeight / 2 + diffY / 10}px`;
     });
-
-    container.addEventListener("mouseleave", () => {
-        if (window.innerWidth >= 680) {
-            // 마우스가 container를 벗어났을 때 light를 초기 위치로 되돌림
-            light.style.transition = `left 0.3s, top 0.3s`;
-            light.style.left = `50%`;
-            light.style.top = `50%`;
-
-            setTimeout(() => {
-                light.style.transition = 'none';
-            }, 300); // transition이 끝난 후에 transition 속성 제거
-        }
-    })
 }
